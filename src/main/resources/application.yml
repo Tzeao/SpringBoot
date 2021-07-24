@@ -1,0 +1,10 @@
+# 配置国际化
+spring:
+ messages:
+   # 默认位置
+   basename: i18n.login
+
+# 关闭thymeleaf缓存
+ thymeleaf:
+   cache: false
+
