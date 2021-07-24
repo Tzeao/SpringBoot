@@ -47,7 +47,7 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
                   <div>
-                        <form th:action="@{/emp}" method="post">
+                        <form th:action="@{/toAdd}" method="post">
                               <div class="form-group">
                                     <label>LastName</label>
                                     <label>
@@ -80,13 +80,9 @@
                                     <label>department</label>
                                     <!--                    //这里要传入对象的一个属性而不是对象  这里是传入dao层的帮助查找部门名称-->
                                     <label>
-                                          <select class="form-control" name="department">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                                <!--                        这是给id传值的-->
+                                          <select class="form-control" name="department.id">
+                                                <option th:each="depts:${dept}" th:text="${depts.getDepartmentName()}" th:value="${depts.getId()}"></option>
+                                                <!--                        value这是传递id的，用于查找-->
                                           </select>
                                     </label>
                               </div>

@@ -7,4 +7,7 @@ spring:
 # 关闭thymeleaf缓存
  thymeleaf:
    cache: false
+   # 日期格式化
+ mvc:
+    date-format: yyyy-MM-dd
 
